@@ -1,0 +1,24 @@
+# k8s-deployment.yaml (No change needed)
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: distilbert-news-classifier-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: news-classifier
+  template:
+    metadata:
+      labels:
+        app: news-classifier
+    spec:
+      containers:
+      - name: classifier-api
+        image: your-docker-registry/news-classifier-api:v1 # Update this line
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            memory: "1Gi"
+            cpu: "1"

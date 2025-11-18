@@ -1,0 +1,13 @@
+# k8s-service.yaml (No change needed)
+apiVersion: v1
+kind: Service
+metadata:
+  name: distilbert-news-classifier-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: news-classifier
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
