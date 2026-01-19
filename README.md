@@ -1,4 +1,4 @@
-# 📰 News Headline Classifier Deployment
+# News Headline Classifier Deployment
 
 ## 1. Introduction
 
@@ -26,7 +26,7 @@ Instead of a large deep learning model, I chose a traditional ML approach for ef
 * **Containerization:** **Docker** for packaging the Python environment, the saved model (`.pkl` files), and the FastAPI application.
 * **Orchestration:** **Kubernetes (K8s)** for managing multiple replicas and providing a scalable, load-balanced entry point.
 
-## 🛠️ 3. Setup and Prerequisites
+## 3. Setup and Prerequisites
 
 You need the following tools installed and configured:
 
@@ -35,7 +35,7 @@ You need the following tools installed and configured:
 * **kubectl** (Configured to connect to a Kubernetes cluster, e.g., MiniKube, GKE, EKS)
 * **The Dataset:** Ensure the `newsCorpora.csv` file is placed in the `news aggregator folder/` directory.
 
-## 📂 4. Project File Structure
+## 4. Project File Structure
 
 ```
 
@@ -58,7 +58,7 @@ tf-idf-deployment/
 
 ---
 
-## 🚀 5. Deployment Steps
+## 5. Deployment Steps
 
 Follow these steps sequentially to train the model, build the container, and deploy it to Kubernetes.
 
